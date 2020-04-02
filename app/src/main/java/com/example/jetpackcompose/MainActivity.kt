@@ -8,6 +8,7 @@ import androidx.ui.core.Text
 import androidx.ui.core.setContent
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
+import androidx.ui.layout.LayoutHeight
 import androidx.ui.layout.LayoutPadding
 import androidx.ui.material.Button
 import androidx.ui.material.Divider
@@ -41,12 +42,13 @@ fun MyScreenContent(
     names: List<String> = listOf("Android", "there"),
     counterState: CounterState = CounterState()
 ) {
-    Column {
-        for (name in names) {
-            Greeting(name = name)
-            Divider(color = Color.Black)
+    Column(modifier = LayoutHeight.Fill) {
+        Column(modifier = LayoutWeight(1f)) {
+            for (name in names) {
+                Greeting(name = name)
+                Divider(color = Color.Black)
+            }
         }
-        Divider(color = Color.Transparent, height = 32.dp)
         Counter(counterState)
     }
 }
@@ -59,12 +61,22 @@ fun Greeting(name: String) {
 @Model
 class CounterState(var count: Int = 0)
 
+//@Model
+//class FormState(var optionChecked: Boolean)
+//
+//@Composable
+//fun Form(formState: FormState) {
+//    Checkbox(
+//        checked = formState.optionChecked,
+//        modifier = LayoutPadding(24.dp),
+//        onCheckedChange = { newState -> formState.optionChecked = newState })
+//}
 
 @Composable
 fun Counter(state: CounterState) {
     Button(
         onClick = { state.count++ },
-        modifier = LayoutPadding(16.dp)
+        backgroundColor = if (state.count > 5) Color.Green else Color.White
     ) {
         Text("I've been clicked ${state.count} times")
     }
