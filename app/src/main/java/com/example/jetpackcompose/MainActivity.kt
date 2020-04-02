@@ -10,10 +10,7 @@ import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.LayoutHeight
 import androidx.ui.layout.LayoutPadding
-import androidx.ui.material.Button
-import androidx.ui.material.Divider
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Surface
+import androidx.ui.material.*
 import androidx.ui.tooling.preview.Preview
 import androidx.ui.unit.dp
 
@@ -21,8 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApp {
-                MyScreenContent()
+            MyAppTheme {
+                Surface {
+                    Greeting("Android")
+                }
             }
         }
     }
@@ -30,10 +29,25 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp(children: @Composable() () -> Unit) {
-    MaterialTheme {
+    MaterialTheme(colors = themeColors) {
         Surface(color = Color.Yellow) {
             children()
         }
+    }
+}
+
+
+val green = Color(0xFF1EB980)
+private val themeColors = lightColorPalette(
+    primary = green,
+    surface = Color.DarkGray,
+    onSurface = green
+)
+
+@Composable
+fun MyAppTheme(children: @Composable() () -> Unit) {
+    MaterialTheme(colors = themeColors) {
+        children()
     }
 }
 
@@ -55,7 +69,11 @@ fun MyScreenContent(
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!", modifier = LayoutPadding(24.dp))
+    Text(
+        text = "Hello $name!",
+        modifier = LayoutPadding(24.dp),
+        style = MaterialTheme.typography().h2
+    )
 }
 
 @Model
@@ -85,8 +103,10 @@ fun Counter(state: CounterState) {
 @Preview
 @Composable
 fun DefaultPreview() {
-    MyApp {
-        MyScreenContent()
+    MyAppTheme {
+        Surface {
+            Greeting("Android")
+        }
     }
 }
 
