@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.Composable
 import androidx.ui.animation.Crossfade
 import androidx.ui.core.setContent
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Surface
 import androidx.ui.tooling.preview.Preview
 import com.example.jetpackcompose.model.Screen
 import com.example.jetpackcompose.model.Status
@@ -27,9 +25,7 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun DefaultPreview() {
     ThemedPreview {
-        Surface(color = MaterialTheme.colors.background) {
-            HomeScreen(Screen.Home)
-        }
+        HomeScreen(Screen.Home)
     }
 }
 
