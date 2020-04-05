@@ -15,8 +15,8 @@ import com.example.jetpackcompose.ui.ThemedPreview
 
 @Composable
 fun AppDrawer(
-    currentScreen: Screen,
-    closeDrawer: () -> Unit
+    currentScreen: Screen = Screen.Home,
+    closeDrawer: () -> Unit = { }
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
         Spacer(modifier = Modifier.preferredHeight(16.dp))
@@ -105,10 +105,7 @@ fun AppDrawer(
 @Composable
 fun PreviewAppDrawer() {
     ThemedPreview {
-        AppDrawer(
-            currentScreen = Screen.Home,
-            closeDrawer = { }
-        )
+        AppDrawer()
     }
 }
 

@@ -6,7 +6,6 @@ import androidx.compose.Composable
 import androidx.ui.animation.Crossfade
 import androidx.ui.core.setContent
 import androidx.ui.tooling.preview.Preview
-import com.example.jetpackcompose.model.Screen
 import com.example.jetpackcompose.model.Status
 import com.example.jetpackcompose.ui.home.HomeScreen
 
@@ -14,10 +13,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Crossfade(current = Status.currentScreen) { screen ->
-                HomeScreen(screen)
-            }
+            Main()
+//            PreviewModalDrawerLayout()
         }
+    }
+}
+
+
+@Composable
+fun Main() {
+    Crossfade(current = Status.currentScreen) { screen ->
+        HomeScreen(screen)
     }
 }
 
@@ -25,7 +31,8 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun DefaultPreview() {
     ThemedPreview {
-        HomeScreen(Screen.Home)
+        HomeScreen()
+        //        PreviewModalDrawerLayout()
     }
 }
 

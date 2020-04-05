@@ -15,7 +15,7 @@ import com.example.jetpackcompose.ui.ThemedPreview
 
 @Composable
 fun HomeScreen(
-    currentScreen: Screen,
+    currentScreen: Screen = Screen.Home,
     scaffoldState: ScaffoldState = remember { ScaffoldState() }
 ) {
     Column {
