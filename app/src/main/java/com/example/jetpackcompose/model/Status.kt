@@ -20,3 +20,8 @@ sealed class Screen {
 object Status {
     var currentScreen: Screen = Screen.Home
 }
+
+@Model
+class FormState(
+    var checked: Boolean = false
+)

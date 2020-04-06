@@ -32,9 +32,8 @@ fun HomeScreen(
                     scaffoldState.drawerState = DrawerState.Opened
                 }
             },
-            bodyContent = {
-                //                    modifier ->
-                //                HomeScreenBody(modifier = modifier, posts = posts)
+            bodyContent = { modifier ->
+                HomeBodyContent(modifier = modifier)
             }
         )
     }
