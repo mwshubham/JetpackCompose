@@ -8,6 +8,7 @@ import androidx.ui.material.Scaffold
 import androidx.ui.material.ScaffoldState
 import androidx.ui.tooling.preview.Preview
 import com.example.jetpackcompose.composable.AppDrawer
+import com.example.jetpackcompose.composable.FloatingActionButtonComponent
 import com.example.jetpackcompose.composable.Toolbar
 import com.example.jetpackcompose.model.Screen
 import com.example.jetpackcompose.ui.ThemedPreview
@@ -34,6 +35,9 @@ fun HomeScreen(
             },
             bodyContent = { modifier ->
                 HomeBodyContent(modifier = modifier)
+            },
+            floatingActionButton = {
+                FloatingActionButtonComponent()
             }
         )
     }

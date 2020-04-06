@@ -19,7 +19,7 @@ package com.example.jetpackcompose.ui
 import androidx.ui.graphics.Color
 import androidx.ui.material.lightColorPalette
 
-// todo how to properly use theme...
+// todo how to properly use theme & customize this sheet...
 val lightThemeColors = lightColorPalette(
     primary = Color(0xFF1F96F3),
     primaryVariant = Color(0xFFC20029),
