@@ -4,12 +4,12 @@ import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.layout.fillMaxSize
 import androidx.ui.material.Surface
-import com.example.jetpackcompose.composable.CheckboxComponent
-import com.example.jetpackcompose.model.FormState
+import com.example.jetpackcompose.composable.VerticalScrollerComponent
 
 @Composable
 fun HomeBodyContent(modifier: Modifier) {
     Surface(modifier = modifier.plus(Modifier.fillMaxSize())) {
-        CheckboxComponent(modifier = modifier, formState = FormState(checked = true))
+        //        CheckboxComponent(modifier = modifier, formState = FormState(checked = true))
+        VerticalScrollerComponent()
     }
 }
