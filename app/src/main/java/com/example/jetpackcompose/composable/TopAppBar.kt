@@ -32,11 +32,13 @@ fun Toolbar(
             }
         },
         actions = {
-            IconButton(onClick = { }) {
-                Icon(
-                    asset = vectorResource(R.drawable.ic_baseline_share_24),
-                    tint = Color.White
-                )
+            repeat(1) {
+                IconButton(onClick = { }) {
+                    Icon(
+                        asset = vectorResource(R.drawable.ic_baseline_share_24),
+                        tint = Color.White
+                    )
+                }
             }
         }
     )
