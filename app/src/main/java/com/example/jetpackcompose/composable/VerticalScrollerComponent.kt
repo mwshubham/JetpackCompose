@@ -20,7 +20,7 @@ fun VerticalScrollerComponent(
         modifier = modifier
     ) {
         Column {
-            repeat(500) {
+            repeat(100) {
                 Text(
                     text = "#$it Hello World ! "
                 )
