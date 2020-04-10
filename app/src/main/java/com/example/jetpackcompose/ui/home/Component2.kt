@@ -114,7 +114,9 @@ fun Component2() {
         )
 
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth()
+                    + Modifier.wrapContentHeight()
+                    + Modifier.padding(top = 8.dp),
             arrangement = Arrangement.SpaceBetween
         ) {
             Row(
@@ -126,15 +128,15 @@ fun Component2() {
                 )
                 Text(
                     text = "10",
-                    modifier = Modifier.padding(start = 8.dp),
+                    modifier = Modifier.padding(start = 8.dp) + Modifier.gravity(RowAlign.Center),
                     style = TextStyle(
                         fontWeight = FontWeight.W500,
-                        fontSize = 16.sp
+                        fontSize = 18.sp
                     )
                 )
                 Text(
                     text = "Apr, Fri",
-                    modifier = Modifier.padding(start = 2.dp),
+                    modifier = Modifier.padding(start = 6.dp) + Modifier.gravity(RowAlign.Center),
                     style = TextStyle(
                         fontWeight = FontWeight.W500,
                         fontSize = 12.sp
@@ -142,8 +144,9 @@ fun Component2() {
                 )
 
             }
+
             Row(
-                modifier = Modifier.wrapContentSize()
+                modifier = Modifier.wrapContentWidth() + Modifier.gravity(RowAlign.Center)
             ) {
                 Surface(
                     border = Border(
@@ -152,13 +155,13 @@ fun Component2() {
                     ),
                     color = Color.Transparent,
                     shape = RoundedCornerShape(12.dp),
-                    modifier = Modifier.padding(end = 2.dp)
+                    modifier = Modifier.padding(end = 6.dp)
                 ) {
                     Text(
                         text = "11 Apr",
-                        modifier = Modifier.padding(8.dp, 2.dp, 8.dp, 2.dp),
+                        modifier = Modifier.padding(8.dp, 4.dp, 8.dp, 4.dp),
                         style = TextStyle(
-                            fontSize = 8.sp
+                            fontSize = 12.sp
                         )
                     )
                 }
@@ -172,9 +175,9 @@ fun Component2() {
                 ) {
                     Text(
                         text = "12 Apr",
-                        modifier = Modifier.padding(8.dp, 2.dp, 8.dp, 2.dp),
+                        modifier = Modifier.padding(8.dp, 4.dp, 8.dp, 4.dp),
                         style = TextStyle(
-                            fontSize = 8.sp
+                            fontSize = 12.sp
                         )
                     )
                 }
@@ -194,6 +197,12 @@ fun Component2() {
                 onClick = {},
                 backgroundColor = Color.Transparent,
                 modifier = Modifier.weight(1f) + Modifier.padding(end = 8.dp),
+                innerPadding = EdgeInsets(
+                    left = 10.dp,
+                    top = 6.dp,
+                    bottom = 6.dp,
+                    right = 10.dp
+                ),
                 border = Border(
                     size = 1.dp,
                     color = colorResource(id = R.color.colorComponent2ButtonOutline)
@@ -206,9 +215,9 @@ fun Component2() {
                     )
                     Text(
                         text = "Search Buses",
-                        modifier = Modifier.padding(start = 2.dp),
+                        modifier = Modifier.padding(start = 2.dp) + Modifier.gravity(RowAlign.Center),
                         style = TextStyle(
-                            fontWeight = FontWeight.Bold,
+//                            fontWeight = FontWeight.Bold,
                             color = colorResource(id = R.color.colorComponent2ButtonText)
                         )
                     )
@@ -219,6 +228,12 @@ fun Component2() {
                 onClick = {},
                 backgroundColor = Color.Transparent,
                 modifier = Modifier.weight(1f) + Modifier.padding(start = 8.dp),
+                innerPadding = EdgeInsets(
+                    left = 10.dp,
+                    top = 6.dp,
+                    bottom = 6.dp,
+                    right = 10.dp
+                ),
                 border = Border(
                     size = 1.dp,
                     color = colorResource(id = R.color.colorComponent2ButtonOutline)
@@ -232,9 +247,9 @@ fun Component2() {
                     )
                     Text(
                         text = "Search Trains",
-                        modifier = Modifier.padding(start = 2.dp),
+                        modifier = Modifier.padding(start = 2.dp) + Modifier.gravity(RowAlign.Center),
                         style = TextStyle(
-                            fontWeight = FontWeight.Bold,
+//                            fontWeight = FontWeight.Bold,
                             color = colorResource(id = R.color.colorComponent2ButtonText)
                         )
                     )

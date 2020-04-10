@@ -62,7 +62,7 @@ fun HomeBodyContent(
                 Card(
                     color = Color.White,
                     shape = RoundedCornerShape(8.dp),
-                    modifier = Modifier.padding(16.dp, 16.dp, 0.dp, 16.dp)
+                    modifier = Modifier.padding(16.dp, 16.dp, 16.dp, 0.dp)
                 ) {
                     Component2()
                 }
