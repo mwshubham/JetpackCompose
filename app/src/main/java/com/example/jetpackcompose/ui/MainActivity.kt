@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Main()
-//            PreviewModalDrawerLayout()
         }
     }
 }
@@ -32,7 +31,6 @@ fun Main() {
 fun DefaultPreview() {
     ThemedPreview {
         HomeScreen()
-        //        PreviewModalDrawerLayout()
     }
 }
 

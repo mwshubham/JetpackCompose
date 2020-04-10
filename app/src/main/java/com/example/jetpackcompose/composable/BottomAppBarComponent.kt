@@ -34,7 +34,6 @@ fun BottomAppBarComponent(
         fabConfiguration = fabConfiguration,
         cutoutShape = cutoutShape
     ) {
-
         RowAddSpaceBetweenViewsComponent {
             IconButton(onClick = { }) {
                 Icon(
@@ -63,8 +62,8 @@ fun RowAddSpaceBetweenViewsComponent(children: @Composable() () -> Unit) {
     // We use Arrangement.SpaceBetween to place the children of the row such that they are spaced
     // evenly across the main axis, without free space before the first child or after the last child.
     Row(
-        modifier = Modifier.fillMaxWidth() + Modifier.padding(4.dp), arrangement = Arrangement
-            .SpaceBetween
+        modifier = Modifier.fillMaxWidth() + Modifier.padding(4.dp),
+        arrangement = Arrangement.SpaceBetween
     ) {
         children()
     }

@@ -3,4 +3,33 @@
     <color name="colorPrimary">#1F96F3</color>
     <color name="colorPrimaryDark">#1F96F3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorDivider">#dcdcdc</color>
+
+    <!--Home Screen Body-->
+    <!--Component1-->
+    <color name="colorComponent1ImageTint">#036da9</color>
+    <color name="colorComponent1HeaderBackground">#f6e638</color>
+    <color name="colorComponent1FooterBackground">#0d528d</color>
+
+    <!--Component2-->
+    <color name="colorComponent2HintText">#989898</color>
+    <color name="colorComponent2SwapImageTint">#989898</color>
+    <color name="colorComponent2CalendarImageTint">#989898</color>
+    <color name="colorComponent2DateOutline">#dedede</color>
+    <color name="colorComponent2DateText">#dedede</color>
+    <color name="colorComponent2ButtonIconTint">#045582</color>
+    <color name="colorComponent2ButtonText">#045582</color>
+    <color name="colorComponent2ButtonOutline">#105483</color>
+
+    <!--Component3-->
+    <color name="colorComponent3Background">#eaf4fe</color>
+
+    <!--Component4-->
+    <color name="colorComponent4BackgroundStart">#dce9f9</color>
+    <color name="colorComponent4BackgroundEnd">#FFFFFF</color>
+
+
+    <!--Bottom Navigation-->
+    <color name="colorBottomNavigationIcon">#808080</color>
+    <color name="colorBottomNavigationText">#808080</color>
 </resources>
