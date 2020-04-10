@@ -6,6 +6,8 @@ import androidx.ui.foundation.Text
 import androidx.ui.graphics.Color
 import androidx.ui.material.IconButton
 import androidx.ui.material.TopAppBar
+import androidx.ui.material.icons.Icons
+import androidx.ui.material.icons.filled.Notifications
 import androidx.ui.res.vectorResource
 import androidx.ui.tooling.preview.Preview
 import com.example.jetpackcompose.R
@@ -32,13 +34,25 @@ fun Toolbar(
             }
         },
         actions = {
-            repeat(1) {
-                IconButton(onClick = { }) {
-                    Icon(
-                        asset = vectorResource(R.drawable.ic_baseline_share_24),
-                        tint = Color.White
-                    )
-                }
+            IconButton(onClick = { }) {
+                Icon(
+                    asset = Icons.Filled.Notifications,
+                    tint = Color.White
+                )
+            }
+
+            IconButton(onClick = { }) {
+                Icon(
+                    asset = vectorResource(id = R.drawable.ic_baseline_local_offer_24),
+                    tint = Color.White
+                )
+            }
+
+            IconButton(onClick = { }) {
+                Icon(
+                    asset = vectorResource(id = R.drawable.ic_baseline_language_24),
+                    tint = Color.White
+                )
             }
         }
     )

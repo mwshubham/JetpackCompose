@@ -29,7 +29,7 @@ fun FloatingActionButtonComponent(
     ) {
         IconButton(onClick = {}) {
             Icon(
-                asset = vectorResource(R.drawable.ic_baseline_home_24),
+                asset = vectorResource(R.drawable.ic_baseline_train_24),
                 tint = Color.White
             )
         }
