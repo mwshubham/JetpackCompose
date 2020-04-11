@@ -35,7 +35,7 @@ val icons = mutableListOf<Int>().apply {
     add(R.drawable.ic_baseline_fastfood_36)
 }
 val footerTexts = mutableListOf<String>().apply {
-    add("intrcity")
+    add("Standard")
     add("IRCTC")
     add("Hygenic")
 }
