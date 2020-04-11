@@ -95,36 +95,49 @@ fun HomeBodyContent(
             }
         }
 
-        var selectedIndex by state { 0 }
-        BottomNavigation(
-            color = Color.White
-        ) {
-            navListLabels.forEachIndexed { index, label ->
-                BottomNavigationItem(
-                    activeColor = Color.Gray,
-                    inactiveColor = Color.LightGray,
-                    icon = {
-                        Icon(
-                            asset = vectorResource(id = navListIcons[index]),
-                            tint = colorResource(id = R.color.colorBottomNavigationIcon)
+        Footer()
+    }
+}
+
+
+@Composable
+private fun Footer() {
+    var selectedIndex by state { 0 }
+    BottomNavigation(
+        color = Color.White
+    ) {
+        navListLabels.forEachIndexed { index, label ->
+            BottomNavigationItem(
+                activeColor = Color.Gray,
+                inactiveColor = Color.LightGray,
+                icon = {
+                    Icon(
+                        asset = vectorResource(id = navListIcons[index]),
+                        tint = colorResource(id = R.color.colorBottomNavigationIcon)
+                    )
+                },
+                text = {
+                    Text(
+                        text = label,
+                        style = TextStyle(
+                            color = colorResource(id = R.color.colorBottomNavigationText)
                         )
-                    },
-                    text = {
-                        Text(
-                            text = label,
-                            style = TextStyle(
-                                color = colorResource(id = R.color.colorBottomNavigationText)
-                            )
-                        )
-                    },
-                    selected = selectedIndex == index,
-                    onSelected = { selectedIndex = index }
-                )
-            }
+                    )
+                },
+                selected = selectedIndex == index,
+                onSelected = { selectedIndex = index }
+            )
         }
     }
 }
 
+@Preview("FooterPreview")
+@Composable
+fun FooterPreview() {
+    ThemedPreview {
+        Footer()
+    }
+}
 
 @Preview("HomeBodyContentPreview")
 @Composable

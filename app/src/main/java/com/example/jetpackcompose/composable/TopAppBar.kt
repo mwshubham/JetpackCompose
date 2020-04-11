@@ -20,7 +20,7 @@ fun Toolbar(
     openDrawer: () -> Unit
 ) {
     TopAppBar(
-        title = { Text(text = "RailYatri") },
+        title = { Text(text = "Travel App") },
         color = lightThemeColors.primary,
         contentColor = Color.White,
         navigationIcon = {
@@ -59,7 +59,7 @@ fun Toolbar(
 }
 
 
-@Preview("ToolAppBar")
+@Preview("TopAppBar")
 @Composable
 fun PreviewToolAppBar() {
     ThemedPreview {
