@@ -22,7 +22,7 @@ import com.example.jetpackcompose.R
 import com.example.jetpackcompose.ui.ThemedPreview
 import com.example.jetpackcompose.ui.lightThemeColors
 
-val navListLabels = listOf("Home", "My Orders", "RY Wallet", "More")
+val navListLabels = listOf("Home", "My Orders", "My Wallet", "More")
 val navListIcons = listOf(
     R.drawable.ic_baseline_home_24,
     R.drawable.ic_baseline_business_center_24,
